@@ -110,10 +110,31 @@ ul li {
   margin-left: 40px;
 }
 
+ul li.unicorn {
+  margin-left: 80px;
+  position: relative;
+}
+
+ul li.unicorn::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: var(--grayish-blue);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translate(-40px, -50%);
+}
+
 ul li a {
   color: var(--very-dark-blue);
   font-weight: 700;
   text-decoration: none;
+}
+
+ul li.unicorn a {
+  color: var(--grayish-blue);
 }
 
 .action-button {
