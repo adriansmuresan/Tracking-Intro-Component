@@ -176,6 +176,43 @@ main {
     font-size: 4em;
   }
 
+  .hamburger {
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    position: fixed;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    top: 100px;
+    left: 20px;
+    background-color: #ffffff;
+    z-index: 100;
+    width: calc(100% - 40px);
+    transform: translateX(200%);
+  }
+  ul li {
+    margin: 15px 20px;
+    text-align: center;
+  }
+
+  ul li.unicorn {
+    margin: 40px 30px 20px;
+  }
+
+  ul li.unicorn::before {
+    height: 1px;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: translate(0, -25px);
+  }
+
+  ul li a {
+    font-size: 1.3em;
+  }
+
   .mobile {
     flex-direction: column-reverse;
   }
