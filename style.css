@@ -18,6 +18,7 @@ body {
   color: var(--very-dark-blue);
   background-color: #ffffff;
   font-size: 1.2em;
+  overflow-x: hidden;
 }
 
 body::after {
@@ -87,6 +88,7 @@ button {
   margin: 0 auto;
   max-width: 100%;
   width: 1200px;
+  padding: 0 30px;
 }
 
 .container > div {
@@ -99,6 +101,10 @@ button {
 
 nav {
   margin: 50px 0;
+}
+
+.hamburger {
+  display: none;
 }
 
 ul {
@@ -132,6 +138,7 @@ ul li.unicorn::before {
   top: 50%;
   left: 0;
   transform: translate(-40px, -50%);
+  opacity: 0.6;
 }
 
 ul li a {
@@ -158,4 +165,27 @@ main {
 
 .illustration {
   transform: scale(2.2) translateX(25%);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .mobile {
+    flex-direction: column-reverse;
+  }
+
+  .action-button {
+    margin-top: 50px;
+  }
+
+  .illustration {
+    transform: scale(1) translate(0%);
+    margin-bottom: 100px;
+  }
 }
